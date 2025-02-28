@@ -56,7 +56,7 @@ public class OpenQuestionCardTest {
     @Test
     @DisplayName("Проверка ответа методом checkAnswer() проходит успешно")
     void having_correctResult_while_using_checkAnswer_method() {
-        String answer = "Неверный ответ";
+        String answer = "Неверный ответ.";
         Assertions.assertTrue(openQuestionCard.checkAnswer(CARD_EXPECTED_ANSWER));
         Assertions.assertFalse(openQuestionCard.checkAnswer(answer));
     }
