@@ -22,6 +22,7 @@ public class OpenQuestionCardTest {
         openQuestionCard = new OpenQuestionCard(CARD_QUESTION, CARD_EXPECTED_ANSWER);
     }
 
+
     @Test
     @DisplayName("OpenQuestionCard создаётся с правильными question и expectedQuestion")
     void having_correctQuestion_when_newOpenQuestionCard_then_created(){
