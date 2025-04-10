@@ -1,0 +1,19 @@
+package ru.burdukov.spring.hibernate.config;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
+
+import javax.sql.DataSource;
+import java.util.Properties;
+
+@Configuration
+@EnableTransactionManagement
+@EntityScan(basePackages = "ru.burdukov.spring.hibernate.entity")
+@EnableJpaRepositories(basePackages = "ru.burdukov.spring.hibernate.repo")
+public class DbConfig {
+    private static final Logger logger = LogManager.getLogger(DbConfig.class);
+}
